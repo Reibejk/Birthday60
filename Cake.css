@@ -1,0 +1,121 @@
+body {
+      margin: 0;
+      font-family: sans-serif;
+      background: #fdf0e6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+.cake-container {
+  position: relative;
+  margin: 5%;
+  width: 500px;
+  height: 500px;
+  
+  radius: 50%;
+  
+}
+
+#cakeWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 5px solid #832E08;
+  border-top: -20px solid #e97451;
+  transform: rotateX(10deg);
+  background: radial-gradient(circle at center, #ffb347, #832E08);
+  z-index: 0;
+  box-shadow: 0 2px 10px #e974af,
+              0 20px 0px #832E08,
+              0 25px 10px #e974af,
+              0 40px 1px #832E08,
+              0 45px 10px #e974af,
+              0 60px 1px #832E08;
+}
+
+.number {
+  font-size: 60px;
+  font-weight: bold;
+  color: #EEECCC;
+  text-shadow: 0 0 1px rgba(0,0,0,0.7),
+               0 0 10px rgba(255,255,255,0.8),
+               0 0 30px rgba(255,105,180,0.9);
+  animation: glowPulse 3s 3s infinite ease-in-out;
+  z-index: 10;
+  pointer-events: none;
+}
+
+@keyframes glowPulse {
+      0% { font-size: 60px; text-shadow: 0 0 1px rgba(0,0,0,0.7), 0 0 10px rgba(255,255,255,0.8), 0 0 30px rgba(255,105,180,0.9); }
+      50% { text-shadow: 0 0 5px rgba(0,0,0,0.7), 0 0 20px rgba(255,255,255,1), 0 0 60px rgba(255,20,147,1); }
+      100% { font-size: 100px; text-shadow: 0 0 10px rgba(0,0,0,0.7), 0 0 10px rgba(255,255,255,0.8), 0 0 30px rgba(255,105,180,0.9); }
+    }
+
+.candles {
+  position: absolute;
+  top: -10px;
+}
+
+ .candle {
+  width: 8px;
+  height: 30px;
+  background: #fff;
+  border-radius: 4px 0px;
+  position: absolute;
+  
+   box-shadow: -1px 0 5px rgba(255,255,255,1),
+               -2px 0 5px rgba(255,255,255,1),
+               0 2px 10px rgba(0,0,0,0.5);
+}
+
+.flame {
+  position: absolute;
+  top: -12px;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 10px;
+  background: radial-gradient(circle, #ffff00, #ff4500);
+  border-radius: 50%;
+  border: 1px solid rgba(0,0,0,0.2);
+  animation: flicker 1s infinite alternate;
+}
+
+@keyframes flicker {
+  0% { transform: translateX(-15%) scaleY(1); opacity: 0.9; }
+  100% { transform: translateY(-15%) scaleY(1.5); opacity: 1; }
+}
+
+.login-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="password"] {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  width: 180px;
+}
+
+button {
+  padding: 8px 16px;
+  background-color: #fff;
+  border: 2px solid #ff8c42;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#main-content {
+  display: none;
+  text-align: center;
+  padding: 20px;
+}
